@@ -1,6 +1,10 @@
 import createElement from './createElement.js'
 
 /**
+ * обработчик формы входа
+ */
+
+/**
  * создаем форму `введите имя фамилию`
  */
 const loginForm = () => {
@@ -23,7 +27,11 @@ const loginForm = () => {
     type: 'text',
     placeholder: 'Введите имя',
     maxLength: 25,
-    minlength: 2,
+    minLength: 2,
+  })
+
+  const form = createElement('form', {
+    id: 'loginForm',
   })
 
   const inp2 = createElement('input', {
@@ -32,20 +40,20 @@ const loginForm = () => {
     type: 'text',
     placeholder: 'Введите фамилию',
     maxLength: 25,
-    minlength: 2,
+    minLength: 2,
   })
 
   const submit = createElement('input', {
     type: 'submit',
     className: 'btn mt-15',
-    textContent: 'Начать тест',
+    value: 'Начать тест',
   })
 
-  div.append(inp1, inp2, submit)
-
+  form.append(inp1, inp2, submit)
+  div.append(form)
   container.append(h2, div)
 
-  return container
+  return { container, form }
 }
 
 const start = (app) => {
@@ -60,9 +68,11 @@ const start = (app) => {
     textContent: 'МетаШкола',
   })
 
-  const createLogin = loginForm()
+  const { container, form } = loginForm()
 
-  app.append(main, h1, createLogin)
+  app.append(main, h1, container)
+
+  return form
 }
 
 export default start
