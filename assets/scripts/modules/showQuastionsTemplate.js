@@ -51,6 +51,6 @@ export default function (fio) {
     innerHTML: '&copy;МетаШкола, 2022',
   })
 
-  wrapper.append(main, h4, container, nav, footer)
-  return { wrapper, container, btnNext, btnAbort }
+  wrapper.append(main, h4)
+  return { wrapper, container, nav, footer, btnNext, btnAbort }
 }

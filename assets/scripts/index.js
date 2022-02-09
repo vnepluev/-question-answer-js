@@ -20,7 +20,7 @@ const login = (event) => {
   app.innerHTML = ''
   const { btnAbort } = showQuastions(app, fio, testData) // выводим вопросы
 
-  // если нажали прервать тест
+  // если нажали прервать тест - перезапускаем
   btnAbort.addEventListener('click', (event) => {
     init('#app')
   })
@@ -31,7 +31,7 @@ const login = (event) => {
  */
 const init = (selectorApp) => {
   const app = document.querySelector(selectorApp)
-  app.innerHTML = '' // очищаем дату
+  app.innerHTML = ''
   const form = start(app)
   form.addEventListener('submit', login)
 }
