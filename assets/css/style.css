@@ -27,6 +27,19 @@ body {
   color: #9b51e0;
 }
 
+.h4 {
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.044em;
+  color: white;
+  background-color: #2d9cdb;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -63,12 +76,13 @@ body {
 
 .main-form {
   margin: 0 auto;
+  margin-top: 40px;
+  max-width: 600px;
+  min-width: 300px;
   padding: 50px;
-  width: 300px;
   background: #c6e2f2;
   border-radius: 50px;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
-  transform: translateY(30%);
 }
 
 .fields-container {
@@ -96,4 +110,17 @@ body {
   border-radius: 10px;
   font-weight: normal;
   font-size: 1rem;
+}
+
+.btn--danger {
+  background: rgb(98, 15, 153);
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+  justify-content: space-between;
+  max-width: 600px;
 }
