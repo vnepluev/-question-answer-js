@@ -6,6 +6,7 @@ import { showQuastions } from './modules/showQuastions.js'
 const login = (event) => {
   event.preventDefault()
 
+  let currentFaqNum = 0
   let firstName = event.target.firstName.value.toLowerCase().trim()
   let lastName = event.target.lastName.value.toLowerCase().trim()
 
@@ -16,9 +17,10 @@ const login = (event) => {
 
   const fio = firstName + ' ' + lastName
 
-  // если проверка имени пройдена
+  // если проверка имени пройдена, выводим вопросы
   app.innerHTML = ''
-  const { btnAbort } = showQuastions(app, fio, testData) // выводим вопросы
+  const { btnAbort, faqNum } = showQuastions(app, fio, testData)
+  currentFaqNum = faqNum
 
   // если нажали прервать тест - перезапускаем
   btnAbort.addEventListener('click', (event) => {
