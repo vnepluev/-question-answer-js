@@ -49,7 +49,6 @@ export const showQuastions = (app, fio, testData) => {
     if (testData.length === faqNum + 1) {
       // вопросы закончились
       console.log(userVariants)
-      userVariants.length = 0 // финальное окошко дописывать не стал
       return
     }
 
